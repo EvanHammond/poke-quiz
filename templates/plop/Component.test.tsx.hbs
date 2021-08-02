@@ -1,0 +1,14 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+
+import { {{pascalCase (name path)}} } from './{{pascalCase (name path)}}';
+
+describe('{{pascalCase (name path)}}', () => {
+  it('renders', () => {
+    const { getByTestId } = render(
+      <{{pascalCase (name path)}} data-testid="{{camelCase (name path)}}" />
+    );
+
+    expect(getByTestId('{{camelCase (name path)}}')).toBeTruthy();
+  });
+});

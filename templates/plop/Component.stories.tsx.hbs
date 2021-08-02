@@ -1,0 +1,20 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import { {{pascalCase (name path)}} } from './{{pascalCase (name path)}}';
+
+const props = {
+  regular: () => ({}),
+};
+
+storiesOf('{{pascalCase (name path)}}', module)
+  .addDecorator(withKnobs)
+  .add(
+    'default',
+    () => {
+      return <{{pascalCase (name path)}}></{{pascalCase (name path)}}>;
+    },
+    {
+      jest: ['{{pascalCase (name path)}}.test.tsx'],
+    }
+  );

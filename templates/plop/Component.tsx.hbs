@@ -1,0 +1,16 @@
+import React, { FC } from 'react';
+import classnames from 'classnames/bind';
+
+import styles from './{{pascalCase (name path)}}.module.css';
+
+const cx = classnames.bind(styles);
+
+type {{pascalCase (name path)}}Props = {};
+
+export const {{pascalCase (name path)}}: FC<{{pascalCase (name path)}}Props> = () => {
+  return (
+    <div className={cx('{{camelCase (name path)}}')} />
+  );
+};
+
+{{pascalCase (name path)}}.displayName = '{{pascalCase (name path)}}';

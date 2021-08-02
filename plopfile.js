@@ -1,8 +1,8 @@
 const path = require('path');
 
-module.exports = plop => {
-  plop.addHelper('absPath', p => path.resolve(plop.getPlopfilePath(), p));
-  plop.addHelper('name', p => p.split('/').pop());
+module.exports = (plop) => {
+  plop.addHelper('absPath', (p) => path.resolve(plop.getPlopfilePath(), p));
+  plop.addHelper('name', (p) => p.split('/').pop());
 
   plop.setGenerator('component', {
     description: 'Create a component',
@@ -21,14 +21,19 @@ module.exports = plop => {
       },
       {
         type: 'add',
-        path: '{{absPath path}}/styles.ts',
-        templateFile: './templates/plop/Component.styles.ts.hbs',
+        path: '{{absPath path}}/{{pascalCase (name path)}}.module.css',
+        templateFile: './templates/plop/Component.module.css.hbs',
       },
       {
         type: 'add',
         path: '{{absPath path}}/{{pascalCase (name path)}}.test.tsx',
         templateFile: './templates/plop/Component.test.tsx.hbs',
       },
+      // {
+      //   type: 'add',
+      //   path: '{{absPath path}}/{{pascalCase (name path)}}.stories.tsx',
+      //   templateFile: './templates/plop/Component.stories.tsx.hbs',
+      // },
       {
         type: 'add',
         path: '{{absPath path}}/index.ts',
