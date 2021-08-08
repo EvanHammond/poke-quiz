@@ -1,16 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { render } from '@testing-library/react';
 
 import { SiteHeader } from './SiteHeader';
 
-const setup = (props = {}) => {
-  return render(<SiteHeader {...props} />);
-};
-
 describe('SiteHeader', () => {
   it('renders', () => {
-    const { getByTestId } = setup();
+    const { getByTestId } = render(
+      <SiteHeader data-testid="siteHeader" />
+    );
 
-    expect(getByTestId('')).toBeTruthy();
+    expect(getByTestId('siteHeader')).toBeTruthy();
   });
 });

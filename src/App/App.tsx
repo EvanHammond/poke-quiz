@@ -1,22 +1,22 @@
-import React from 'react';
-import './App.css';
+import classnames from 'classnames/bind';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from 'src/modules/PokemonQuiz/modules/Home';
+import { SiteHeader } from '../components/SiteHeader';
+import styles from './App.module.css';
+
+const cx = classnames.bind(styles);
 
 export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={cx('app')}>
+      <SiteHeader />
+      <div className={cx('content')}>
+        <Router>
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        </Router>
+      </div>
     </div>
   );
 }

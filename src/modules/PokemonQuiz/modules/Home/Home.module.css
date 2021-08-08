@@ -1,0 +1,9 @@
+.home {
+  @apply hero;
+  @apply min-h-screen;
+}
+
+.homeContent {
+  @apply text-center;
+  @apply hero-content;
+}

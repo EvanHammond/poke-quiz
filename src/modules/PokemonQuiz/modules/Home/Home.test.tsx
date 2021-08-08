@@ -1,16 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { render } from '@testing-library/react';
 
 import { Home } from './Home';
 
-const setup = (props = {}) => {
-  return render(<Home {...props} />);
-};
-
 describe('Home', () => {
   it('renders', () => {
-    const { getByTestId } = setup();
+    const { getByTestId } = render(
+      <Home data-testid="home" />
+    );
 
-    expect(getByTestId('')).toBeTruthy();
+    expect(getByTestId('home')).toBeTruthy();
   });
 });

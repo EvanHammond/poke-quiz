@@ -1,0 +1,8 @@
+.siteHeader {
+  @apply navbar;
+  @apply shadow-lg;
+  @apply bg-red-600;
+  @apply text-gray-900;
+  @apply flex;
+  @apply flex-col;
+}

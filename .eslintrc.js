@@ -27,10 +27,12 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   rules: {
+    'react/react-in-jsx-scope': 'off',
     'react/display-name': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/ban-types': ['warn'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
