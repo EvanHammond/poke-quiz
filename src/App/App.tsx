@@ -1,6 +1,7 @@
 import classnames from 'classnames/bind';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home } from 'src/modules/PokemonQuiz/modules/Home';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { Home } from 'src/modules/Home';
+import { Quiz } from 'src/modules/Quiz';
 import { SiteHeader } from '../components/SiteHeader';
 import styles from './App.module.css';
 
@@ -13,7 +14,10 @@ export function App() {
       <div className={cx('content')}>
         <Router>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route path="/quiz" component={Quiz} />
+            <Route exact path="/" component={Home} />
+
+            <Route path="*" component={() => <Redirect to="/" />} />
           </Switch>
         </Router>
       </div>
