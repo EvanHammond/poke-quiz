@@ -1,0 +1,15 @@
+.loadingSpinner {
+  display: flex;
+  flex-direction: row;
+  color: text-01;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-content: center;
+  padding: 3rem 0;
+}
+
+.block {
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+}

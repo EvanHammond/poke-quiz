@@ -5,7 +5,7 @@ import styles from './{{pascalCase (name path)}}.module.css';
 
 const cx = classnames.bind(styles);
 
-type {{pascalCase (name path)}}Props = {};
+type {{pascalCase (name path)}}Props = Record<string, unknown>;
 
 export const {{pascalCase (name path)}}: FC<{{pascalCase (name path)}}Props> = () => {
   return (
